@@ -1,6 +1,9 @@
 import {AxiosInstance, AxiosError} from 'axios';
 
-export const initInterception = (axios: AxiosInstance, token: string): void => {
+export const initInterception = (
+  axios: AxiosInstance,
+  token?: string,
+): void => {
   axios.interceptors.request.use(
     config => {
       if (config.headers) {
