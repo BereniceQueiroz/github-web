@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  margin: 0;
+}
+
+.nav {
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: $blue;
+  font-size: 12px;
+}

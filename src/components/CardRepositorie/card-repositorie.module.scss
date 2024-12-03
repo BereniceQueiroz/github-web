@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  gap: 10px;
+  background-color: $base-border;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  padding: 16px 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+
+  h3 {
+    color: $base-subtitle;
+    font-size: 14px;
+  }
+
+  p {
+    color: $base-text;
+    font-size: 12px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    p {
+      color: $base-text;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+}
