@@ -10,6 +10,6 @@ export const api = axios.create({
   },
 });
 
-// const token = env.VITE_GITHUB_TOKEN;
+const token = env.VITE_GITHUB_TOKEN;
 
-initInterception(api);
+initInterception(api, token);
