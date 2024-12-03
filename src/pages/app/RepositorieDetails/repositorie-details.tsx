@@ -14,8 +14,6 @@ export function RepositorieDetails() {
     {fullname: repo},
   );
 
-  console.log(repositoryDetail, repo);
-
   return (
     <>
       <Helmet title="Repositório" />
@@ -28,7 +26,7 @@ export function RepositorieDetails() {
         {!isLoadingRepository && hasError && (
           <p>Erro ao carregar dados do repositório.</p>
         )}
-        {!isLoadingRepository && !hasError && (
+        {!isLoadingRepository && !hasError && repositoryDetail && (
           <>
             <CardRepositorieDetails repositorie={repositoryDetail} />
             <Link to="/" className="text-primary">

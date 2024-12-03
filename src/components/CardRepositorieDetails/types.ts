@@ -3,10 +3,10 @@ type Repositorie = {
   name: string;
   full_name: string;
   stargazers_count: number;
-  description: string;
-  language: string;
+  description?: string;
+  language?: string;
 };
 
 export interface RepositorieProps {
-  repositorie: Repositorie | [];
+  repositorie: Repositorie;
 }

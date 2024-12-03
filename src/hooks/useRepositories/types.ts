@@ -11,6 +11,8 @@ type Repositorie = {
   private: boolean;
   full_name: string;
   stargazers_count: number;
+  language?: string;
+  description?: string;
 };
 
 export type GetRepositoriesResponse = Repositorie[];
