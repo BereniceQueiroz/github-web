@@ -33,8 +33,8 @@ Certifique-se de ter o seguinte instalado:
 ### **1. Clonar o Repositório**
 
 ```bash
-git clone https://github.com/BereniceQueiroz/github-users.git
-cd github-users
+git clone https://github.com/BereniceQueiroz/github-web.git
+cd github-web
 npm install
 npm run dev
 ```
@@ -56,13 +56,15 @@ O projeto será executado em http://localhost:3000 (ou outro porto disponível).
 
 ## **Estrutura do Projeto**
 
+
+```plaintext
 gitusers-web/
 ├── public/             # Arquivos estáticos públicos
 ├── src/
 │   ├── assets/         # Imagens, ícones, e outros recursos
 │   ├── components/     # Componentes reutilizáveis
 │   ├── hooks/          # Custom Hooks
-|   ├── libs/           # Configuração e instâncias do Axios / Configuração do React Query
+│   ├── libs/           # Configuração e instâncias do Axios / Configuração do React Query
 │   ├── pages/          # Páginas principais da aplicação
 │   ├── routes/         # Configuração das rotas da aplicação
 │   ├── styles/         # Estilos globais e variáveis SCSS
@@ -70,9 +72,10 @@ gitusers-web/
 │   ├── main.tsx        # Ponto de entrada da aplicação
 ├── .env                # Variáveis de ambiente (não versionadas)
 ├── .gitignore          # Arquivos ignorados pelo Git
-├── vite.config.ts       # Configuração do Vite
-├── tsconfig.json        # Configuração do TypeScript
+├── vite.config.ts      # Configuração do Vite
+├── tsconfig.json       # Configuração do TypeScript
 └── package.json        # Dependências e scripts
+```
 
 
 ---
