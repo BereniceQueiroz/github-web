@@ -1,11 +1,12 @@
 import {AxiosInstance, AxiosError} from 'axios';
 
-export const initInterception = (axios: AxiosInstance): void => {
+export const initInterception = (axios: AxiosInstance, token: string): void => {
   axios.interceptors.request.use(
     config => {
       if (config.headers) {
         config.headers['Content-Type'] =
           config.headers['Content-Type'] || 'application/json';
+        config.headers.Authorization = `Bearer ${token}`;
       }
 
       config.timeout = 10000;

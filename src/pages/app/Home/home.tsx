@@ -27,11 +27,9 @@ export function Home() {
       <Helmet title="Home" />
       <div className={`container-full p-12 ${s.wrapper}`}>
         <Search setUsername={setUsername} />
-        <div className="container h-100 p-12 d-flex justify-content-center align-items-center">
+        <div className="container h-100 p-12 d-flex justify-content-start align-items-center">
           {isLoadingUser && <p>Carregando...</p>}
           {!isLoadingUser && hasError && <p>Usuário não encontrado.</p>}
-        </div>
-        <div className="container justify-content-start">
           {!isLoadingUser && user && (
             <CardProfile user={user} onClick={() => handleNavigate()} />
           )}

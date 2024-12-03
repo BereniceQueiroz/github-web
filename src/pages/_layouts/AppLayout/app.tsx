@@ -9,7 +9,7 @@ export function AppLayout() {
     <div className={`container-fluid h-100 p-0 background ${s.background}`}>
       <Header />
       <div
-        className={`container h-75 p-10 d-flex justify-content-center align-items-center`}>
+        className={`container p-10 d-flex justify-content-center align-items-center`}>
         <Outlet />
       </div>
     </div>

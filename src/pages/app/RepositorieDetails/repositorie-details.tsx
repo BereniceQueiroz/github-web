@@ -1,51 +1,39 @@
 import {Helmet} from 'react-helmet-async';
-import {useLocation} from 'react-router-dom';
+import {Link, useSearchParams} from 'react-router-dom';
 
+import {CardRepositorieDetails} from '@/components/CardRepositorieDetails';
 import {useRepositoryDetail} from '@/hooks/useRepositories';
 
 import s from './repositorie-details.module.scss';
 
 export function RepositorieDetails() {
-  const location = useLocation();
-  const {fullname} = location.state || {};
+  const [searchParams] = useSearchParams();
+  const repo = searchParams.get('repo');
 
   const {repositoryDetail, isLoadingRepository, hasError} = useRepositoryDetail(
-    {fullname},
+    {fullname: repo},
   );
 
-  console.log(repositoryDetail, fullname);
+  console.log(repositoryDetail, repo);
 
   return (
     <>
       <Helmet title="Repositório" />
       <div className={`container-full d-flex flex-column gap-3 ${s.wrapper}`}>
         <div className="container d-flex flex-row gap-3 align-items-start justify-content-between sort-container">
-          <h1>Repositório {fullname}</h1>
+          <h1>Repositório {repo}</h1>
         </div>
 
         {isLoadingRepository && <p>Carregando...</p>}
         {!isLoadingRepository && hasError && (
-          <p>Erro ao carregar repositórios.</p>
+          <p>Erro ao carregar dados do repositório.</p>
         )}
         {!isLoadingRepository && !hasError && (
           <>
-            {/* <CardRepositorie repositories={repositories} />
-            {repositories.length > 0 && (
-              <div className="container d-flex justify-content-center align-items-center pagination-container">
-                <button
-                  className="btn btn-primary me-2"
-                  onClick={handlePreviousPage}
-                  disabled={page === 1}>
-                  Página Anterior
-                </button>
-                <span className="px-2">Página {page}</span>
-                <button
-                  className="btn btn-primary ms-2"
-                  onClick={handleNextPage}>
-                  Próxima Página
-                </button>
-              </div>
-            )} */}
+            <CardRepositorieDetails repositorie={repositoryDetail} />
+            <Link to="/" className="text-primary">
+              Voltar para o início
+            </Link>
           </>
         )}
       </div>

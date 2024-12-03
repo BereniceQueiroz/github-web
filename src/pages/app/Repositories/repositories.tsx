@@ -22,7 +22,7 @@ export function Repositories() {
   });
 
   const handleNavigate = (fullName: string) => {
-    navigate('/repositorie-details', {state: {fullName}});
+    navigate(`/repositorie-details?repo=${fullName}`);
   };
 
   const handleNextPage = () => setPage(prev => prev + 1);

@@ -16,7 +16,7 @@ type Repositorie = {
 export type GetRepositoriesResponse = Repositorie[];
 
 export interface GetRepositoryDetailQuery {
-  fullname: string;
+  fullname: string | null;
 }
 
 export type GetRepositoryDetailResponse = Repositorie;

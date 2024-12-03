@@ -1,11 +1,24 @@
 .wrapper {
-  padding: 16px;
+  padding: 32px 16px;
   width: 100%;
   height: 100vh;
 
   h1 {
     color: $base-label;
     font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: $base-label;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $base-label;
+    font-size: 16px;
+    margin-bottom: 0;
   }
 
   @media (min-width: 1024px) {

@@ -19,7 +19,7 @@ export function CardRepositorie({repositories, handleClick}: RepositorieProps) {
 
   return (
     <div className="container d-flex flex-column gap-3">
-      {repositories.map(repo => (
+      {repositories?.map(repo => (
         <div
           key={repo.id}
           className={s.card}
