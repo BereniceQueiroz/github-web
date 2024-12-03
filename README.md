@@ -81,8 +81,9 @@ gitusers-web/
 ---
 
 # **Variáveis de ambiente**
-VITE_API_BASE_URL=https://api.github.com
-VITE_GITHUB_TOKEN=disponibilizado via e-mail
+- **VITE_API_BASE_URL**: https://api.github.com
+- **VITE_GITHUB_TOKEN**: disponibilizado via e-mail
+
 ---
 
 ## **Funcionalidades**
