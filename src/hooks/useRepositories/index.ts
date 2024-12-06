@@ -47,7 +47,7 @@ export function useRepositoryDetail({fullname}: GetRepositoryDetailQuery) {
 
   return {
     repositoryDetail: data,
-    isLoadingRepository: isLoading,
+    isLoadingRepositoryDetail: isLoading,
     hasError: isError,
   };
 }
