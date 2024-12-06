@@ -1,5 +1,5 @@
 import {Helmet} from 'react-helmet-async';
-import {Link, useNavigate, useSearchParams} from 'react-router-dom';
+import {useNavigate, useSearchParams} from 'react-router-dom';
 
 import {CardRepositorieDetails} from '@/components/CardRepositorieDetails';
 import {useRepositoryDetail} from '@/hooks/useRepositories';
@@ -11,9 +11,8 @@ export function RepositorieDetails() {
   const navigate = useNavigate();
   const repo = searchParams.get('repo');
 
-  const {repositoryDetail, isLoadingRepository, hasError} = useRepositoryDetail(
-    {fullname: repo},
-  );
+  const {repositoryDetail, isLoadingRepositoryDetail, hasError} =
+    useRepositoryDetail({fullname: repo});
 
   return (
     <>
@@ -24,11 +23,11 @@ export function RepositorieDetails() {
           <h1>Repositório {repo}</h1>
         </div>
 
-        {isLoadingRepository && <p>Carregando...</p>}
-        {!isLoadingRepository && hasError && (
+        {isLoadingRepositoryDetail && <p>Carregando...</p>}
+        {!isLoadingRepositoryDetail && hasError && (
           <p>Erro ao carregar dados do repositório.</p>
         )}
-        {!isLoadingRepository && !hasError && repositoryDetail && (
+        {!isLoadingRepositoryDetail && !hasError && repositoryDetail && (
           <div
             className={`${s.content} container-full d-flex flex-column gap-5 align-items-start justify-content-between sort-container`}>
             <CardRepositorieDetails repositorie={repositoryDetail} />
