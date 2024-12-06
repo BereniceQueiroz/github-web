@@ -3,21 +3,18 @@
   gap: 10px;
   background-color: $base-border;
   width: 100%;
-  margin: auto;
   height: auto;
-  padding: 16px 30px;
-  flex-direction: row;
+  padding: 16px;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: 4px;
 
-  h3 {
-    color: $base-subtitle;
-    font-size: 14px;
-  }
-
-  p {
-    color: $base-text;
-    font-size: 12px;
+  > div {
+    p {
+      color: $base-text;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   }
 
   .info {
@@ -25,12 +22,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 4px;
 
     p {
       color: $base-text;
       font-size: 12px;
       margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    > div {
+      p {
+        color: $base-text;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
   }
 }

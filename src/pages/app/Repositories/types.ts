@@ -27,4 +27,5 @@ export interface ContentProps {
   page: number;
   handleNextPage: () => void;
   handlePreviousPage: () => void;
+  handleGoBack: () => void;
 }

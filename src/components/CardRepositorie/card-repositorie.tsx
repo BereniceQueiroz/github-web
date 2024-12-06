@@ -6,17 +6,6 @@ import s from './card-repositorie.module.scss';
 import {RepositorieProps} from './types';
 
 export function CardRepositorie({repositories, handleClick}: RepositorieProps) {
-  if (!repositories || repositories.length === 0) {
-    return (
-      <div className="container d-flex flex-column gap-3 justify-content-center align-items-center">
-        <p>Nenhum repositório encontrado</p>
-        <Link to="/" className="text-primary">
-          Voltar para o início
-        </Link>
-      </div>
-    );
-  }
-
   return (
     <div className="container d-flex flex-column gap-3">
       {repositories?.map(repo => (
