@@ -17,7 +17,7 @@ export function useRepositories({
     queryKey: ['repositoriesData', username, direction, page],
     queryFn: async (): Promise<GetRepositoriesResponse> => {
       const response = await api.get<GetRepositoriesResponse>(
-        `/users/${username}/repos?sort=stargazers&direction=${direction}&page=${page}&per_page=${5}`,
+        `/users/${username}/repos`,
       );
       return response.data;
     },

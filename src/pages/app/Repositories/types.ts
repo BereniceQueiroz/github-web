@@ -1,7 +1,7 @@
 export interface HeaderProps {
   username: string;
   direction: string;
-  setDirection: React.Dispatch<React.SetStateAction<string>>;
+  setDirection: (value: string) => void;
 }
 
 export interface PaginationProps {
@@ -10,7 +10,7 @@ export interface PaginationProps {
   handlePreviousPage: () => void;
 }
 
-type Repositorie = {
+export type Repositorie = {
   id: string;
   name: string;
   license: string;
