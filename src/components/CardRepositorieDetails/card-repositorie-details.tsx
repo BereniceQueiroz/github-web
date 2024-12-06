@@ -5,13 +5,13 @@ import {RepositorieProps} from './types';
 
 export function CardRepositorieDetails({repositorie}: RepositorieProps) {
   return (
-    <div className="container d-flex flex-column justify-content-center align-items-center gap-3">
+    <div className={`${s.card}`}>
       <div
         key={repositorie.id}
-        className={s.card}
+        className={`cd-flex justify-content-sm-center justify-content-md-between justify-content-lg-end`}
         aria-label={`Detalhes do repositório ${repositorie.name}`}>
-        <h3>{repositorie.name}</h3>
-        <h4>{repositorie.description}</h4>
+        <p className="mb-4">{repositorie.name}</p>
+        <p className="mb-4">{repositorie.description}</p>
         <p>{repositorie.language}</p>
         <div className={s.info}>
           <SVGStarIcon />

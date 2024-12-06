@@ -25,9 +25,9 @@ export function Home() {
   return (
     <>
       <Helmet title="Home" />
-      <div className={`container-full p-12 ${s.wrapper}`}>
+      <div className={`container-full d-flex flex-column gap-3 ${s.wrapper}`}>
         <Search setUsername={setUsername} />
-        <div className="container h-100 p-12 d-flex justify-content-start align-items-center">
+        <div className="container d-flex justify-content-center align-items-center">
           {isLoadingUser && <p>Carregando...</p>}
           {!isLoadingUser && hasError && <p>Usuário não encontrado.</p>}
           {!isLoadingUser && user && (

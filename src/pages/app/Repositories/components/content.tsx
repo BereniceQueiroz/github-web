@@ -12,6 +12,7 @@ export function Content({
   page,
   handleNextPage,
   handlePreviousPage,
+  handleGoBack,
 }: ContentProps) {
   return (
     <>
@@ -29,11 +30,20 @@ export function Content({
             handleClick={handleNavigate}
           />
           {repositories.length > 0 && (
-            <Pagination
-              page={page}
-              handleNextPage={handleNextPage}
-              handlePreviousPage={handlePreviousPage}
-            />
+            <>
+              <Pagination
+                page={page}
+                handleNextPage={handleNextPage}
+                handlePreviousPage={handlePreviousPage}
+              />
+
+              <button
+                onClick={() => handleGoBack()}
+                className="btn btn-link text-primary"
+                aria-label="Voltar para a página anterior">
+                Voltar para a página anterior
+              </button>
+            </>
           )}
         </>
       )}

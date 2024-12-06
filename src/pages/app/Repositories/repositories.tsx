@@ -25,6 +25,10 @@ export function Repositories() {
     navigate(`/repositorie-details?repo=${fullName}`);
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   const handleNextPage = () => setPage(prev => prev + 1);
   const handlePreviousPage = () => setPage(prev => Math.max(prev - 1, 1));
 
@@ -44,7 +48,8 @@ export function Repositories() {
   return (
     <>
       <Helmet title={`Repositórios de ${username}`} />
-      <div className={`container-full d-flex flex-column gap-3 ${s.wrapper}`}>
+      <div
+        className={`container-full mt-10 d-flex flex-column gap-3 ${s.wrapper}`}>
         <Header
           username={username}
           direction={direction}
@@ -58,6 +63,7 @@ export function Repositories() {
           page={page}
           handleNextPage={handleNextPage}
           handlePreviousPage={handlePreviousPage}
+          handleGoBack={handleGoBack}
         />
       </div>
     </>
