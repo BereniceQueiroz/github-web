@@ -12,7 +12,7 @@ export function Repositories() {
   const location = useLocation();
   const navigate = useNavigate();
   const {username} = location.state || {};
-  const [direction, setDirection] = useState<string>('asc');
+  const [direction, setDirection] = useState<string>('desc');
 
   const [page, setPage] = useState<number>(1);
 
