@@ -1,5 +1,3 @@
-import {Link} from 'react-router-dom';
-
 import SVGStarIcon from '@/assets/icons/star.svg?react';
 
 import s from './card-repositorie.module.scss';
