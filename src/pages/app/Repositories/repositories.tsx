@@ -7,7 +7,6 @@ import {useRepositories} from '@/hooks/useRepositories';
 import {Content} from './components/content';
 import {Header} from './components/header';
 import s from './repositories.module.scss';
-import {Repositorie} from './types';
 
 export function Repositories() {
   const location = useLocation();
