@@ -29,7 +29,7 @@ export function RepositorieDetails() {
         )}
         {!isLoadingRepositoryDetail && !hasError && repositoryDetail && (
           <div
-            className={`${s.content} container-full d-flex flex-column gap-5 align-items-start justify-content-between sort-container`}>
+            className={`${s.content} w-100 container-full d-flex flex-column gap-5 align-items-start justify-content-between sort-container`}>
             <CardRepositorieDetails repositorie={repositoryDetail} />
             <button
               onClick={() => navigate(-1)}
